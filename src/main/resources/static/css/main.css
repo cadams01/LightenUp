@@ -1,0 +1,39 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body {
+	display: flex;	
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	background: green;
+	height: 100vh;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 30vh;
+	min-height: 140px;
+	list-style: none;
+	padding-left: 1.3vw;
+}
+
+li a {
+	text-decoration: none;
+	margin: 4px;
+	color: red;
+	text-align: left;
+}
+
+main {
+	padding-left: 2vw;
+}
