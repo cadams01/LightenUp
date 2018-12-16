@@ -12,6 +12,12 @@ public class HomeController {
 	private HomeRepository homeRepository;
 	
 	@GetMapping("/")
+	public ModelAndView home(Home home) {
+		ModelAndView mv = new ModelAndView("home/home");
+		return mv;
+	}
+
+	@GetMapping("/all")
 	public ModelAndView index(Home home) {
 		ModelAndView mv = new ModelAndView("home/index");
 		mv.addObject("homes", homeRepository.findAll());
