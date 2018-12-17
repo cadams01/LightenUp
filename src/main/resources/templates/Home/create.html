@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create</title>
+  <title>Christmas DeLights</title>
   <link rel="stylesheet" href="/css/main.css" />
 </head>
 
@@ -18,7 +18,7 @@
   
   <div class="row justify-content-center">
 			<div class="col-8">
-				<form action="#" th:action="@{/create}" th:object="${home}" method="post">
+				<form action="#" th:action="@{/home/create}" th:object="${home}" method="post">
 					<div class="form-group">
 				    <label for="Street Address">Street Address:</label>
 				    <input type="text" th:field="*{streetAddress}" class="form-control" id="streetAddress" placeholder="Enter street address">

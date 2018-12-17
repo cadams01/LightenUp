@@ -4,13 +4,10 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
-
-
 
 @Controller
 public class HomeController {
@@ -48,9 +45,8 @@ public class HomeController {
 	@PostMapping("/home/create")
 	public ModelAndView create(Home home) {
 		ModelAndView mv = new ModelAndView("home/show");
-		Home myHome = homeRepository.save(home);
+		Home myHome = homeRepository.save(new Home());
 		mv.addObject("home", myHome);
 		return mv;
 	}
-
 }
