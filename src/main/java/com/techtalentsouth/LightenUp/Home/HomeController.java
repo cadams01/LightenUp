@@ -45,7 +45,7 @@ public class HomeController {
 	@PostMapping("/home/create")
 	public ModelAndView create(Home home) {
 		ModelAndView mv = new ModelAndView("home/show");
-		Home myHome = homeRepository.save(new Home());
+		Home myHome = homeRepository.save(new Home(home.getStreetAddress(), home.getZipCode(), home.getCity(), home.getRating(), home.getFeatures()));
 		mv.addObject("home", myHome);
 		return mv;
 	}
