@@ -11,12 +11,11 @@
 <div th:replace="fragments/head :: nav"></div>
 
 <main>
-    <div th:each="home : ${homes}">
-        <div class="home-card">
-            <p th:text="${home.toString()}"></p>    
-            <a th:href="@{/home/show/{id}(id=${home.getId()})}">go here</a>
-        </div>
-    </div>
+	<div class="home-card">
+		<p th:text="${home.toString()}"></p>    
+		
+	</div>
+</div>
 </main>
 
 </body>
