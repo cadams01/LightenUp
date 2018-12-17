@@ -1,12 +1,14 @@
 package com.techtalentsouth.LightenUp.Home;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
+
+
 
 @Controller
 public class HomeController {
@@ -32,6 +34,20 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("home/show");
 		Optional<Home> home = homeRepository.findById(id);
 		mv.addObject("home", home);
+		return mv;
+	}
+	
+	@GetMapping("/home/create")
+	public ModelAndView newBlog(Home home) {
+		ModelAndView mv = new ModelAndView("home/create");
+		return mv;
+	}
+	
+	@PostMapping("/home/create")
+	public ModelAndView create(Home home) {
+		ModelAndView mv = new ModelAndView("home/show");
+		Home myHome = homeRepository.save(home);
+		mv.addObject("home", myHome);
 		return mv;
 	}
 
