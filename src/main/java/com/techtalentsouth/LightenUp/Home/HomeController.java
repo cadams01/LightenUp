@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -25,6 +26,14 @@ public class HomeController {
 	public ModelAndView index(Home home) {
 		ModelAndView mv = new ModelAndView("home/index");
 		mv.addObject("homes", homeRepository.findAll());
+		return mv;
+	}
+	
+	@GetMapping("/home/show/{id}")
+	public ModelAndView show(@PathVariable("id") long id) {
+		ModelAndView mv = new ModelAndView("home/show");
+		Optional<Home> home = homeRepository.findById(id);
+		mv.addObject("home", home);
 		return mv;
 	}
 	
