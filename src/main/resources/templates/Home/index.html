@@ -14,7 +14,7 @@
     <div th:each="home : ${homes}">
         <div class="home-card">
             <p th:text="${home.toString()}"></p>    
-            <a th:href="@{/show/{id}(id=${home.getId()})}">go here</a>
+            <a th:href="@{/home/show/{id}(id=${home.getId()})}">go here</a>
         </div>
     </div>
 </main>

@@ -27,7 +27,7 @@ public class HomeController {
 		return mv;
 	}
 	
-	@GetMapping("/show/{id}")
+	@GetMapping("/home/show/{id}")
 	public ModelAndView show(@PathVariable("id") long id) {
 		ModelAndView mv = new ModelAndView("home/show");
 		Optional<Home> home = homeRepository.findById(id);
