@@ -10,8 +10,8 @@
 
 	<div th:replace="fragments/head :: nav"></div>
 
-	<main>
-	<h1>Edit or Delete the Destination</h1>
+<main>
+	<h1>Edit the Destination</h1>
 	<div class="home-card">
 		<div class="row">
 				<div class="col-md-6">
@@ -25,17 +25,6 @@
 							<p th:text="${home.getRating()}" />
 							<p th:text="${home.getFeatures()}" />
 						</div>
-
-						<form action="#" th:action="@{/home/show/{id}(id=${home.getId()})}"
-							th:method="delete" class="form-horizontal">
-							<button type="submit" class="btn btn-danger btn-block">Delete
-								this Destination</button>
-						</form>
-						<form action="#" th:action="@{/home/show/{id}(id=${home.getId()})}"
-							th:method="" class="form-horizontal">
-							<button type="submit" class="btn btn-danger btn-block">Delete
-								this Destination</button>
-						</form>
 					</div>
 				</div>
 			</div>

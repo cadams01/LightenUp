@@ -57,4 +57,12 @@ public class HomeController {
 		homeRepository.deleteById(id);
 		return mv;
 	}
+	
+	@GetMapping("/home/show/{id}")
+	public ModelAndView editHome(@PathVariable("id") long id) {
+		ModelAndView mv = new ModelAndView("home/edit");
+		Optional<Home> home = homeRepository.findById(id);
+		mv.addObject("home", home.get());
+		return mv;
+	}
 }
