@@ -7,6 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -55,6 +58,21 @@ public class HomeController {
 	public ModelAndView deleteHome(@PathVariable("id") long id) {
 		ModelAndView mv = new ModelAndView("redirect:/all");
 		homeRepository.deleteById(id);
+		return mv;
+	}
+	
+	@GetMapping("/home/edit/{id}")
+	public ModelAndView updateHome(@PathVariable("id") long id) {
+		ModelAndView mv = new ModelAndView("home/edit");
+		Optional<Home> home = homeRepository.findById(id);
+		mv.addObject("home", home);
+		return mv;
+	}
+	
+	@PutMapping("/home/edit")
+	public ModelAndView updateHome(Home home) {
+		ModelAndView mv = new ModelAndView("redirect:/all");
+		homeRepository.save(home);
 		return mv;
 	}
 }
