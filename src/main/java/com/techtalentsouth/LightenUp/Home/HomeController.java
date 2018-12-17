@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,24 +30,31 @@ public class HomeController {
 	}
 	
 	@GetMapping("/home/show/{id}")
-	public ModelAndView show(@PathVariable("id") long id) {
+	public ModelAndView showHomes(@PathVariable("id") long id) {
 		ModelAndView mv = new ModelAndView("home/show");
 		Optional<Home> home = homeRepository.findById(id);
-		mv.addObject("home", home);
+		mv.addObject("home", home.get());
 		return mv;
 	}
 	
 	@GetMapping("/home/create")
-	public ModelAndView newBlog(Home home) {
+	public ModelAndView createHome(Home home) {
 		ModelAndView mv = new ModelAndView("home/create");
 		return mv;
 	}
 	
 	@PostMapping("/home/create")
-	public ModelAndView create(Home home) {
-		ModelAndView mv = new ModelAndView("home/show");
+	public ModelAndView result(Home home) {
+		ModelAndView mv = new ModelAndView("home/result");
 		Home myHome = homeRepository.save(new Home(home.getStreetAddress(), home.getZipCode(), home.getCity(), home.getRating(), home.getFeatures()));
 		mv.addObject("home", myHome);
+		return mv;
+	}
+	
+	@DeleteMapping("/home/show/{id}")
+	public ModelAndView deleteHome(@PathVariable("id") long id) {
+		ModelAndView mv = new ModelAndView("redirect:/all");
+		homeRepository.deleteById(id);
 		return mv;
 	}
 }
