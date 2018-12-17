@@ -11,26 +11,20 @@
 	<div th:replace="fragments/head :: nav"></div>
 
 	<main>
-	<h1>Edit or Delete the Destination</h1>
+	<h1>New Destination Created</h1>
 	<div class="home-card">
 		<div class="row">
 				<div class="col-md-6">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<p th:text="${home.getStreetAddress()}"/>
-							<p th:text="${home.getCity()}" />
-							<p th:text="${home.getZipCode()}" />
+							<p th:text="${home.streetAddress}"/>
+							<p th:text="${home.city}" />
+							<p th:text="${home.zipCode}" />
 						</div>
 						<div class="panel-body">
-							<p th:text="${home.getRating()}" />
-							<p th:text="${home.getFeatures()}" />
+							<p th:text="${home.rating}" />
+							<p th:text="${home.features}" />
 						</div>
-
-						<form action="#" th:action="@{/home/show/{id}(id=${home.getId()})}"
-							th:method="delete" class="form-horizontal">
-							<button type="submit" class="btn btn-danger btn-block">Delete
-								this Destination</button>
-						</form>
 					</div>
 				</div>
 			</div>
