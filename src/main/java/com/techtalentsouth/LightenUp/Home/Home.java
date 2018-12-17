@@ -24,7 +24,6 @@ public class Home {
 	}
 
 	public Home(String streetAddress, String zipCode, String city, int rating, String features) {
-		super();
 		this.streetAddress = streetAddress;
 		this.zipCode = zipCode;
 		this.city = city;
@@ -79,7 +78,4 @@ public class Home {
 	public Long getId() {
 		return id;
 	}
-	
-	
-
 }
