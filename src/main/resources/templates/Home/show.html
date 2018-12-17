@@ -25,16 +25,10 @@
 							<p th:text="${home.getRating()}" />
 							<p th:text="${home.getFeatures()}" />
 						</div>
-
-						<form action="#" th:action="@{/home/show/{id}(id=${home.getId()})}"
-							th:method="delete" class="form-horizontal">
-							<button type="submit" class="btn btn-danger btn-block">Delete
-								this Destination</button>
-						</form>
-						<form action="#" th:action="@{/home/show/{id}(id=${home.getId()})}"
-							th:method="" class="form-horizontal">
-							<button type="submit" class="btn btn-danger btn-block">Delete
-								this Destination</button>
+						<a class="btn btn-primary" th:href="@{/home/edit/{id}(id=${home.getId()})}">Edit</a>
+						
+						<form action="#" th:action="@{/home/show/{id}(id=${home.getId()})}" th:method="delete" class="form-horizontal">
+							<button type="submit" class="btn btn-danger btn-block">Delete</button>
 						</form>
 					</div>
 				</div>

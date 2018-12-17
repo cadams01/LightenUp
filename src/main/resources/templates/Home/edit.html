@@ -10,25 +10,37 @@
 
 	<div th:replace="fragments/head :: nav"></div>
 
-<main>
+	<main>
 	<h1>Edit the Destination</h1>
-	<div class="home-card">
-		<div class="row">
-				<div class="col-md-6">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<p th:text="${home.getStreetAddress()}"/>
-							<p th:text="${home.getCity()}" />
-							<p th:text="${home.getZipCode()}" />
-						</div>
-						<div class="panel-body">
-							<p th:text="${home.getRating()}" />
-							<p th:text="${home.getFeatures()}" />
-						</div>
-					</div>
+	<div class="row justify-content-center">
+		<div class="col-8">
+			<form action="#" th:action="@{/home/edit}" th:object="${home}" th:method="put">
+				<input type="hidden" th:field="*{id}"/>
+				<div class="form-group">
+					<label for="Street Address">Street Address:</label> <input
+						type="text" th:field="*{streetAddress}" class="form-control"
+					 	placeholder="Enter street address">
 				</div>
-			</div>
+				<div class="form-group">
+					<label for="City">City:</label> <input type="text"
+						th:field="*{city}" class="form-control" placeholder="Enter city">
+				</div>
+				<div class="form-group">
+					<label for="Zip Code">Zip Code:</label> <input type="text"
+						th:field="*{zipCode}" class="form-control" placeholder="Enter zip code: XXXXX">
+				</div>
+				<div class="form-group">
+					<label for="Features">Features:</label>
+					<textarea th:field="*{features}" class="form-control" rows="3" placeholder="Enter features"></textarea>
+				</div>
+				<div class="form-group">
+					<label for="rating">Rating:</label> <input type="text"
+						th:field="*{rating}" class="form-control" placeholder="Enter rating: 1-10">
+				</div>
+				<button class="btn btn-primary">Submit</button>
+			</form>
 		</div>
+	</div>
 	</main>
 
 </body>
