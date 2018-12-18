@@ -1,7 +1,9 @@
 html, body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+	font-family: 'Old Standard TT', serif;
+	letter-spacing: 2px;
+	
 }
 
 body {
@@ -18,17 +20,25 @@ h1, .subtitle {
 	overflow: hidden;
 	padding-top: 40px;
 	opacity: 0.97;
+	display: flex;
+	align-items: center;
+	min-width: 
+	
 }
 
 .topnav a {
 	float: left;
-	color: #f2f2f2;
-	display: block;
+	color: #c9dfff;
 	text-align: center;
 	padding: 20px 20px;
 	padding-right: 50px;
 	text-decoration: none;
 	font-size: 17px;
+}
+
+#brandtext {
+	font-family: 'Dancing Script', cursive;
+	font-size: 3rem;
 }
 
 main {
@@ -55,11 +65,6 @@ main {
 	padding-bottom: 10px;
 }
 
-
-#viewall, #addnew {
-	color: #c9dfff;
-}
-
 #viewall:hover {
 	color: green;
 	transition: color .6s;
@@ -67,6 +72,11 @@ main {
 
 #addnew:hover {
 	color: red;
+	transition: color .6s;
+}
+
+#search:hover{
+	color: green;
 	transition: color .6s;
 }
 
@@ -91,6 +101,7 @@ main {
 	display: none;
 }
 
-/* #editbtn:hover {
-	width: 80%;
-} */
+.btn {
+	font-weight: 700;
+	font-size: 1.3rem;
+}

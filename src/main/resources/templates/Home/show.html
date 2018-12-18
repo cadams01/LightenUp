@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-	<div th:replace="fragments/head :: bootstrapHeader"></div>
-	 <div th:replace="fragments/lights :: light"></div>
+<div th:replace="fragments/head :: bootstrapHeader"></div>
+<div th:replace="fragments/lights :: light"></div>
 </head>
 <body>
 
@@ -10,31 +10,38 @@
 
 	<div class="container">
 		<div class="jumbotron center" id="indexjumbo">
-		<h1>Edit or Delete the Destination</h1>
-    
-        <div class="home-card">
-            <div class="card border-danger solid">
-			    	<div class="card-header bg-white text-purple">
-			    		<h2><span th:text="${home.getStreetAddress()}"></span>, <span th:text="${home.getCity()}"></span>
-			    		<span  th:text="${home.getZipCode()}"></span></h2>
-			    	</div>
-			    	<div class="card-body">
-			    		Rating: <span class="card-title" th:text="${home.getRating()}"></span><p></p>
-			    		Features: <span class="card-text" th:text="${home.getFeatures()}"></span>
-			    	</div>
-			    </div>   
-            <div id="showbtn">
-							<a id="editbtn" class="btn btn-success btn-block" th:href="@{/home/edit/{id}(id=${home.getId()})}">Edit</a>
-							<form action="#" th:action="@{/home/show/{id}(id=${home.getId()})}" th:method="delete" class="form-horizontal">
-								<button id="deletebtn" type="submit" class="btn btn-danger btn-block">Delete</button>
-							</form>
-						</div>
-            <p></p>
-            <div></div>
-        </div>
-  
-</div>
-</div>
+			<h2>Edit or Delete the Destination</h2>
+
+			<div class="home-card">
+				<div class="card border-danger solid">
+					<div class="card-header bg-white text-purple">
+						<h3>
+							<span th:text="${home.getStreetAddress()}"></span>, <span
+								th:text="${home.getCity()}"></span> <span
+								th:text="${home.getZipCode()}"></span>
+						</h3>
+					</div>
+					<div class="card-body">
+						Rating: <span class="card-title" th:text="${home.getRating()}"></span>
+						<p></p>
+						Features: <span class="card-text" th:text="${home.getFeatures()}"></span>
+					</div>
+				</div>
+				<div id="showbtn">
+					<a id="editbtn" class="btn btn-success btn-block"
+						th:href="@{/home/edit/{id}(id=${home.getId()})}">Edit</a>
+					<form action="#" th:action="@{/home/show/{id}(id=${home.getId()})}"
+						th:method="delete" class="form-horizontal">
+						<button id="deletebtn" type="submit"
+							class="btn btn-danger btn-block">Delete</button>
+					</form>
+				</div>
+				<p></p>
+				<div></div>
+			</div>
+
+		</div>
+	</div>
 	<div th:replace="fragments/head :: bootstrapFooter"></div>
 	<script src="http://localhost:8080/scripts/main.js"></script>
 </body>

@@ -9,26 +9,39 @@
 	<div th:replace="fragments/head :: nav"></div>
 
 <div class="container">
-		<div class="jumbotron center">
-	<h1>New Destination Created</h1>
-	<div class="home-card">
-		<div class="row">
-				<div class="col-md-6">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<p th:text="${home.streetAddress}"/>
-							<p th:text="${home.city}" />
-							<p th:text="${home.zipCode}" />
-						</div>
-						<div class="panel-body">
-							<p th:text="${home.rating}" />
-							<p th:text="${home.features}" />
-						</div>
+		<div class="jumbotron center" id="indexjumbo">
+			<h2>Your New Destination</h2>
+
+			<div class="home-card">
+				<div class="card border-danger solid">
+					<div class="card-header bg-white text-purple">
+						<h3>
+							<span th:text="${home.getStreetAddress()}"></span>, <span
+								th:text="${home.getCity()}"></span> <span
+								th:text="${home.getZipCode()}"></span>
+						</h3>
+					</div>
+					<div class="card-body">
+						Rating: <span class="card-title" th:text="${home.getRating()}"></span>
+						<p></p>
+						Features: <span class="card-text" th:text="${home.getFeatures()}"></span>
 					</div>
 				</div>
+				<div id="showbtn">
+					<a id="editbtn" class="btn btn-success btn-block"
+						th:href="@{/home/edit/{id}(id=${home.getId()})}">Edit</a>
+					<form action="#" th:action="@{/home/show/{id}(id=${home.getId()})}"
+						th:method="delete" class="form-horizontal">
+						<button id="deletebtn" type="submit"
+							class="btn btn-danger btn-block">Delete</button>
+					</form>
+				</div>
+				<p></p>
+				<div></div>
 			</div>
+
 		</div>
-	</div></div>
+	</div>
 	<div th:replace="fragments/head :: bootstrapFooter"></div>
 </body>
 </html>
