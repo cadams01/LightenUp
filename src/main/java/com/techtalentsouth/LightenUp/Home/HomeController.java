@@ -18,7 +18,7 @@ public class HomeController {
 	private HomeRepository homeRepository;
 	
 	@GetMapping("/")
-	public ModelAndView home(Home home) {
+	public ModelAndView snow(Home home) {
 		ModelAndView mv = new ModelAndView("home/home");
 		return mv;
 	}
