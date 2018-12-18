@@ -73,4 +73,13 @@ public class HomeController {
 		homeRepository.save(home);
 		return mv;
 	}
+	
+	
+	@GetMapping("/home/search")
+	public ModelAndView searchHome(Home home) {
+		ModelAndView mv = new ModelAndView("home/search");
+		return mv;
+	}
+
+	
 }
