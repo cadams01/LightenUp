@@ -7,7 +7,8 @@
 
 	<div th:replace="fragments/head :: nav"></div>
 
-	<main>
+	<div class="container">
+		<div class="jumbotron center">
 	<h1>Edit the Destination</h1>
 	<div class="row justify-content-center">
 		<div class="col-8">
@@ -34,11 +35,11 @@
 					<label for="rating">Rating:</label> <input type="text"
 						th:field="*{rating}" class="form-control" placeholder="Enter rating: 1-10">
 				</div>
-				<button class="btn btn-primary">Submit</button>
+				<button class="btn btn-success btn-block">Submit</button>
 			</form>
 		</div>
 	</div>
-	</main>
+	</div></div>
 	<div th:replace="fragments/head :: bootstrapFooter"></div>
 </body>
 </html>

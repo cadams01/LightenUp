@@ -6,6 +6,7 @@ html, body {
 
 body {
 	background-image: url("https://images3.alphacoders.com/782/thumb-1920-782477.jpg");
+	background-color: #1f253c;
 }
 
 .topnav {
@@ -32,4 +33,5 @@ main {
 
 .jumbotron {
 	margin: 100px;
+	opacity: 0.9;
 }
