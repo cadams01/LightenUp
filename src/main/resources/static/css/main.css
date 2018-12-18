@@ -9,10 +9,15 @@ body {
 	background-color: #1f253c;
 }
 
+h1, .subtitle {
+	text-align: center;
+}
+
 .topnav {
 	background-color: #1f253c;
 	overflow: hidden;
 	padding-top: 40px;
+	opacity: 0.97;
 }
 
 .topnav a {
@@ -33,5 +38,59 @@ main {
 
 .jumbotron {
 	margin: 100px;
-	opacity: 0.9;
+	opacity: 0.97;
+	padding: 32px;
+	background: #1f253c;
+	color: #c9dfff;
 }
+
+#homejumbo {
+	background: #1f253c;
+	color: #c9dfff;
+}
+
+#indexjumbo {
+	background: #1f253c;
+	color: #c9dfff;
+	padding-bottom: 10px;
+}
+
+
+#viewall, #addnew {
+	color: #c9dfff;
+}
+
+#viewall:hover {
+	color: green;
+	transition: color .6s;
+}
+
+#addnew:hover {
+	color: red;
+	transition: color .6s;
+}
+
+.card-header, .card-body {
+	color: black;
+}
+
+.border-danger {
+	border: solid red .4em;
+}
+
+#showbtn {
+	display: flex;
+}
+
+#editbtn {
+	z-index: 1;
+	width: 100%;
+}
+
+#deletebtn {
+	display: none;
+}
+
+/* #editbtn:hover {
+	width: 80%;
+} */

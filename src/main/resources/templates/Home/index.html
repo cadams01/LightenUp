@@ -9,12 +9,12 @@
 <div th:replace="fragments/head :: nav"></div>
 
 <div class="container">
-		<div class="jumbotron center">
+		<div class="jumbotron center" id="indexjumbo">
 		<h2>View All Destinations</h2>
     <div th:each="home : ${homes}">
         <div class="home-card">
             <div class="card border-danger solid">
-			    	<div class="card-header bg-white text-red">
+			    	<div class="card-header bg-white text-purple">
 			    		<h2><span th:text="${home.getStreetAddress()}"></span>, <span th:text="${home.getCity()}"></span>
 			    		<span  th:text="${home.getZipCode()}"></span></h2>
 			    	</div>
@@ -28,7 +28,8 @@
             <div></div>
         </div>
     </div>
-</div></div>
+</div>
+</div>
 
 	<div th:replace="fragments/head :: bootstrapFooter"></div>
 </body>
