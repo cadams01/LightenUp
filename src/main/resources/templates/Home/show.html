@@ -21,10 +21,13 @@
 								th:text="${home.getZipCode()}"></span>
 						</h3>
 					</div>
-					<div class="card-body">
-						Rating: <span class="card-title" th:text="${home.getRating()}"></span>
-						<p></p>
-						Features: <span class="card-text" th:text="${home.getFeatures()}"></span>
+					<div class="cardi">
+						<div class="card-body left">
+							Rating: <span class="card-title" th:text="${home.getRating()}"></span>
+							<p></p>
+							Features: <span class="card-text" th:text="${home.getFeatures()}"></span>
+						</div>
+						<div class="imageholder"></div>
 					</div>
 				</div>
 				<div id="showbtn">
@@ -38,6 +41,7 @@
 				</div>
 				<p></p>
 				<div></div>
+				
 			</div>
 
 		</div>
