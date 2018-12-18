@@ -2,20 +2,24 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Christmas DeLights</title>
-  <link rel="stylesheet" href="/css/main.css" />
+<div th:replace="fragments/head :: bootstrapHeader"></div>
+<div th:replace="fragments/lights :: light"></div>
 </head>
-
 <body>
+	<div th:replace="fragments/head :: nav"></div>
 
-  <div th:replace="fragments/head :: nav"></div>
+	<div class="container">
+		<div class="jumbotron center">
+			<h1>Welcome to Christmas Delights!</h1>
 
-  <main>
-    <h1>this is the homepage!</h1>
-  </main>
 
+			<p>Lighten up your night by visiting one of our Christmas DeLight
+				Destinations!</p>
+			
+		</div>
+	</div>
+	
+	<div th:replace="fragments/head :: bootstrapFooter"></div>
 </body>
 
 </html>

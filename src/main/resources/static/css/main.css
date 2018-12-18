@@ -5,35 +5,31 @@ html, body {
 }
 
 body {
-	display: flex;	
+	background-image: url("https://images3.alphacoders.com/782/thumb-1920-782477.jpg");
 }
 
-nav {
-	display: flex;
-	flex-direction: column;
-	padding-left: 2vw;
-	padding-right: 2vw;
-	background: green;
-	height: 100vh;
+.topnav {
+	background-color: #1f253c;
+	overflow: hidden;
+	padding-top: 40px;
 }
 
-nav ul {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 30vh;
-	min-height: 140px;
-	list-style: none;
-	padding-left: 1.3vw;
-}
-
-li a {
+.topnav a {
+	float: left;
+	color: #f2f2f2;
+	display: block;
+	text-align: center;
+	padding: 20px 20px;
+	padding-right: 50px;
 	text-decoration: none;
-	margin: 4px;
-	color: red;
-	text-align: left;
+	font-size: 17px;
 }
 
 main {
 	padding-left: 2vw;
+	color: white;
+}
+
+.jumbotron {
+	margin: 100px;
 }
