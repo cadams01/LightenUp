@@ -52,6 +52,7 @@ main {
 	padding: 32px;
 	background: #1f253c;
 	color: #c9dfff;
+	min-width: 426px;
 }
 
 #homejumbo {
@@ -104,4 +105,15 @@ main {
 .btn {
 	font-weight: 700;
 	font-size: 1.3rem;
+}
+
+.cardi{
+	display: flex;
+}
+
+.imageholder {
+	background: gold;
+	height:200px;
+	width:200px;
+	margin: 1em;
 }
