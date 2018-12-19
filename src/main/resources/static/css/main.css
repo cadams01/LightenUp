@@ -2,7 +2,12 @@ html, body {
 	padding: 0;
 	margin: 0;
 	font-family: 'Old Standard TT', serif;
-	letter-spacing: 2px;
+	letter-spacing: 2px;	
+	caret-color: red;
+}
+
+* {
+	cursor: url("/santa.cur"), pointer;
 	
 }
 
@@ -151,7 +156,6 @@ main {
     white
   )
 }
-
 
 .gingerbreadImg{
 	border-radius: 50%;
