@@ -149,6 +149,11 @@ main {
   )
 }
 
+.gingerbreadImg{
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+}
 
 .randomPic{
 	border-radius: 50px;

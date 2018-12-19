@@ -19,7 +19,7 @@ function hideDelete(){
 
 window.onload = choosePic;
 
-var myPix = new Array("/house1.jpg","/house2.jpg","/house3.jpg","/house4.jpg", "/house5.jpg");
+var myPix = new Array("/house1.jpg","/house2.jpg","/house3.jpg","/house4.jpg", "/house5.jpg", "/house6.jpg","/house7.jpg","/house8.jpg","/house9.jpg", "/house10.jpg");
 
 function choosePic() {
      var randomNum = Math.floor(Math.random() * myPix.length);
