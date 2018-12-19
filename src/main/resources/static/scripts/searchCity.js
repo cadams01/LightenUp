@@ -1,10 +1,15 @@
-var list = document.querySelectorAll(".city")
+const list = document.querySelectorAll(".city")
+const btn = document.querySelector('.searchbtn')
+const input = document.querySelector('.cityinput')
 
-for(let city of list){
-	if (city.innerHTML.toLowerCase() == "charlotte"){
-		console.log(city)
-	}
-	else{
-		city.parentElement.parentElement.parentElement.parentElement.parentElement.style.display ="none"
-	}
-}
+btn.addEventListener('click', function(){
+	list.forEach(x => {
+		console.log(x.textContent)
+		console.log(input.value)
+		if(x.textContent.toLowerCase() != input.value.toLowerCase()){
+			x.parentElement.parentElement.parentElement.parentElement.style = "display: none";
+			x.parentElement.parentElement.parentElement.parentElement.nextSibling.nextSibling.style = "display:none"
+		}
+	})
+})
+
