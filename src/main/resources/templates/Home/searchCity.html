@@ -10,13 +10,13 @@
 
 <div class="container">
 		<div class="jumbotron center" id="indexjumbo">
-		<h2>View All Destinations</h2>
-		
+		<h2>Search by City</h2>
+		<input class="text" id="search"/>
     <div th:each="home : ${homes}">
         <div class="home-card">
             <div class="card border-danger solid">
-			    	<div class="card-header bg-white text-purple">
-			    		<h3><span th:text="${home.getStreetAddress()}"></span>, <span th:text="${home.getCity()}"></span>
+			    	<div class="card-header bg-white">
+			    		<h3><span th:text="${home.getStreetAddress()}"></span>, <span class="city" th:text="${home.getCity()}"></span>
 			    		<span  th:text="${home.getZipCode()}"></span>
 			    		<span style="float:right">Rating: <span class="card-title" th:text="${home.getRating()}"></span></span></h3>
 			    	</div>
@@ -31,6 +31,6 @@
 </div>
 
 	<div th:replace="fragments/head :: bootstrapFooter"></div>
-	<script src="http://localhost:8080/scripts/sort.js"></script>
+	<script src="http://localhost:8080/scripts/searchCity.js"></script>
 </body>
 </html>

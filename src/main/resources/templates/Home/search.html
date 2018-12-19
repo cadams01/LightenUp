@@ -12,11 +12,11 @@
 		<div class="jumbotron" id="homejumbo" style="align-content: center">
 			<h1>Choose a Search Option</h1>
 
-			<form>
-				<input type="radio" name="searchOption" value="streetAddress" checked>Street Address<br>
-				<input type="radio" name="searchOption" value="city">City<br>
+			<form action="/home/search">
+				<input type="radio" name="searchOption" value="city" checked>City<br>
 				<input type="radio" name="searchOption" value="zipCode">Zip Code<br>
 				<input type="radio" name="searchOption" value="rating">Rating
+				<a type="btn btn-success" href="/home/searchCity">Search</a>
 			</form>
 
 		</div>

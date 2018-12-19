@@ -87,6 +87,14 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("home/search");
 		return mv;
 	}
+	
+	@GetMapping("/home/searchCity")
+	public ModelAndView searchCity(Home home) {
+		ModelAndView mv = new ModelAndView("home/searchCity");
+		mv.addObject("homes", homeRepository.findAll());
+		return mv;
+	}
+	
 /*	
 	@RequestMapping(value="/home/search", method = RequestMethod.GET)
     @ResponseBody
