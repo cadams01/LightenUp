@@ -17,12 +17,41 @@
 			<a href="http://localhost:8080/home/search-dsc/">Rating Descending</a>
 			<a href="http://localhost:8080/home/search-asc/">Rating Ascending</a>
 		</div>
+		
 		<div class="home-card">
             <div class="card border-danger solid">
 			    	<div class="card-header bg-white text-purple">
-			    		<h3><span>543 N Tryon</span>, <span>Charlotte</span>
-			    		<span>29341</span>
-			    		<span style="float:right">Rating: <span class="card-title">3</span></span></h3>
+			    		<h3><span>42 Wallaby Way</span>, <span>Sydney</span>
+			    		<span>87072</span>
+			    		<span style="float:right">Rating: <span class="card-title">10</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
+		
+		<div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>3100 Westbury Lake Dr</span>, <span>Charlotte</span>
+			    		<span>28269</span>
+			    		<span style="float:right">Rating: <span class="card-title">9</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
+		
+         <div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>300 East</span>, <span>Charlotte</span>
+			    		<span>28269</span>
+			    		<span style="float:right">Rating: <span class="card-title">8</span></span></h3>
 			    	</div>
 			    	</div>
 			    </div>   
@@ -48,22 +77,8 @@
         <div class="home-card">
             <div class="card border-danger solid">
 			    	<div class="card-header bg-white text-purple">
-			    		<h3><span>72 Shire Ln</span>, <span>Mordor</span>
-			    		<span>18345</span>
-			    		<span style="float:right">Rating: <span class="card-title">7</span></span></h3>
-			    	</div>
-			    	</div>
-			    </div>   
-            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
-            <p></p>
-            <div>
-        </div>
-        
-         <div class="home-card">
-            <div class="card border-danger solid">
-			    	<div class="card-header bg-white text-purple">
-			    		<h3><span>300 East</span>, <span>Charlotte</span>
-			    		<span>28269</span>
+			    		<h3><span>6 Conchly Blvd</span>, <span>Marzipann</span>
+			    		<span>14117</span>
 			    		<span style="float:right">Rating: <span class="card-title">8</span></span></h3>
 			    	</div>
 			    	</div>
@@ -76,23 +91,9 @@
         <div class="home-card">
             <div class="card border-danger solid">
 			    	<div class="card-header bg-white text-purple">
-			    		<h3><span>1803 Blue Note Ave</span>, <span>Coltrane Town</span>
-			    		<span>60606</span>
-			    		<span style="float:right">Rating: <span class="card-title">5</span></span></h3>
-			    	</div>
-			    	</div>
-			    </div>   
-            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
-            <p></p>
-            <div>
-        </div>
-        
-        <div class="home-card">
-            <div class="card border-danger solid">
-			    	<div class="card-header bg-white text-purple">
-			    		<h3><span>42 Wallaby Way</span>, <span>Sydney</span>
-			    		<span>87072</span>
-			    		<span style="float:right">Rating: <span class="card-title">10</span></span></h3>
+			    		<h3><span>72 Shire Ln</span>, <span>Mordor</span>
+			    		<span>18345</span>
+			    		<span style="float:right">Rating: <span class="card-title">7</span></span></h3>
 			    	</div>
 			    	</div>
 			    </div>   
@@ -118,20 +119,6 @@
         <div class="home-card">
             <div class="card border-danger solid">
 			    	<div class="card-header bg-white text-purple">
-			    		<h3><span>3100 Westbury Lake Dr</span>, <span>Charlotte</span>
-			    		<span>28269</span>
-			    		<span style="float:right">Rating: <span class="card-title">9</span></span></h3>
-			    	</div>
-			    	</div>
-			    </div>   
-            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
-            <p></p>
-            <div>
-        </div>
-        
-        <div class="home-card">
-            <div class="card border-danger solid">
-			    	<div class="card-header bg-white text-purple">
 			    		<h3><span>4 Whitford Place</span>, <span>Exton</span>
 			    		<span>19341</span>
 			    		<span style="float:right">Rating: <span class="card-title">7</span></span></h3>
@@ -146,9 +133,23 @@
         <div class="home-card">
             <div class="card border-danger solid">
 			    	<div class="card-header bg-white text-purple">
-			    		<h3><span>6 Conchly Blvd</span>, <span>Marzipann</span>
-			    		<span>14117</span>
-			    		<span style="float:right">Rating: <span class="card-title">8</span></span></h3>
+			    		<h3><span>1803 Blue Note Ave</span>, <span>Coltrane Town</span>
+			    		<span>60606</span>
+			    		<span style="float:right">Rating: <span class="card-title">5</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
+        
+        <div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>543 N Tryon</span>, <span>Charlotte</span>
+			    		<span>29341</span>
+			    		<span style="float:right">Rating: <span class="card-title">3</span></span></h3>
 			    	</div>
 			    	</div>
 			    </div>   
