@@ -16,24 +16,24 @@
 				<input type="hidden" th:field="*{id}"/>
 				<div class="form-group">
 					<label for="Street Address">Street Address:</label> <input
-						type="text" th:field="*{streetAddress}" class="form-control"
+						type="text" required th:field="*{streetAddress}" class="form-control"
 					 	placeholder="Enter street address">
-				</div>
+				</div> 
 				<div class="form-group">
 					<label for="City">City:</label> <input type="text"
-						th:field="*{city}" class="form-control" placeholder="Enter city">
+						required th:field="*{city}" class="form-control" placeholder="Enter city">
 				</div>
 				<div class="form-group">
 					<label for="Zip Code">Zip Code:</label> <input type="text"
-						th:field="*{zipCode}" class="form-control" placeholder="Enter zip code: XXXXX">
+					 th:field="*{zipCode}" class="form-control" placeholder="Enter zip code">
 				</div>
 				<div class="form-group">
 					<label for="Features">Features:</label>
-					<textarea th:field="*{features}" class="form-control" rows="3" placeholder="Enter features"></textarea>
+					<textarea required th:field="*{features}" class="form-control" rows="3" placeholder="Enter features"></textarea>
 				</div>
 				<div class="form-group">
 					<label for="rating">Rating:</label> <input type="text"
-						th:field="*{rating}" class="form-control" placeholder="Enter rating: 1-10">
+						required th:field="*{rating}" class="form-control" placeholder="Enter rating: 1-10">
 				</div>
 				<button class="btn btn-success btn-block">Submit</button>
 			</form>

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -86,6 +87,15 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("home/search");
 		return mv;
 	}
-
-	
+/*	
+	@RequestMapping(value="/home/search", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView search(@RequestParam(value = "search") String search) {
+		ModelAndView mv = new ModelAndView("redirect:/all");
+		Iterable<Home> home = homeRepository.findAll();
+		for(@SuppressWarnings("unused") Home house : home) {
+			
+		}
+        return mv;
+	}	*/
 }

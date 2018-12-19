@@ -17,6 +17,15 @@ function hideDelete(){
 
 
 
+window.onload = choosePic;
+
+var myPix = new Array("/house1.jpg","/house2.jpg","/house3.jpg","/house4.jpg", "/house5.jpg");
+
+function choosePic() {
+     var randomNum = Math.floor(Math.random() * myPix.length);
+     document.getElementById("myPicture").src = myPix[randomNum];
+}
+
 
 /* ========================================================================
  * Bootstrap: transition.js v3.3.5

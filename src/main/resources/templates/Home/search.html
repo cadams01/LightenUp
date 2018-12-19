@@ -9,15 +9,19 @@
 	<div th:replace="fragments/head :: nav"></div>
 
 	<div class="container">
-		<div class="jumbotron" id="homejumbo" style="align-content:center">
-			<h1>Search Functionality Coming Soon!</h1>
+		<div class="jumbotron" id="homejumbo" style="align-content: center">
+			<h1>Choose a Search Option</h1>
 
+			<form>
+				<input type="radio" name="searchOption" value="streetAddress" checked>Street Address<br>
+				<input type="radio" name="searchOption" value="city">City<br>
+				<input type="radio" name="searchOption" value="zipCode">Zip Code<br>
+				<input type="radio" name="searchOption" value="rating">Rating
+			</form>
 
-			<p class="subtitle">Try visiting our other pages!</p>
-			
 		</div>
 	</div>
-	
+
 	<div th:replace="fragments/head :: bootstrapFooter"></div>
 </body>
 

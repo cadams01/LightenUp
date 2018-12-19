@@ -10,15 +10,6 @@ body {
 	background-image: url("https://images3.alphacoders.com/782/thumb-1920-782477.jpg");
 	background-color: #1f253c;
 }
-img {
-    position: relative;
-    float: left;
-    width:  100px;
-    height: 500px;
-    background-position: 50% 50%;
-    background-repeat:   no-repeat;
-    background-size:     cover;
-}
 
 h1, .subtitle {
 	text-align: center;
@@ -60,18 +51,18 @@ main {
 	opacity: 0.97;
 	padding: 32px;
 	background: #1f253c;
-	color: #c9dfff;
+	color: white;
 	min-width: 426px;
 }
 
 #homejumbo {
 	background: #1f253c;
-	color: #c9dfff;
+	color: white;
 }
 
 #indexjumbo {
 	background: #1f253c;
-	color: #c9dfff;
+	color: white;
 	padding-bottom: 10px;
 }
 
@@ -125,10 +116,8 @@ main {
 	height:200px;
 	width:200px;
 	margin: 1em;
+
 }
-
-
-
 
 
 
@@ -161,14 +150,20 @@ main {
 }
 
 
+.randomPic{
+	border-radius: 50px;
+	max-width: 300px;
+	max-height: 300px;
+	padding: 2em;
+}
 
+.randomPic:hover {
+  opacity: .5;
+}
 
-
-
-
-
-img{
+.img{
 	min-width: 100%;
+	max-height: 460px;
 }
 .sr-only{
 	position: absolute;

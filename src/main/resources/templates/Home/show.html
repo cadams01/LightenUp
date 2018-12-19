@@ -14,7 +14,7 @@
 
 			<div class="home-card">
 				<div class="card border-danger solid">
-					<div class="card-header bg-white text-purple">
+					<div class="card-header bg-white">
 						<h3>
 							<span th:text="${home.getStreetAddress()}"></span>, <span
 								th:text="${home.getCity()}"></span> <span
@@ -26,9 +26,13 @@
 							Rating: <span class="card-title" th:text="${home.getRating()}"></span>
 							<p></p>
 							Features: <span class="card-text" th:text="${home.getFeatures()}"></span>
-						</div>
-						<div class="imageholder"></div>
+						</div>	
+
+						<img class="randomPic" src="/spacer.gif" id="myPicture"/>
+
+
 					</div>
+
 				</div>
 				<div id="showbtn">
 					<a id="editbtn" class="btn btn-success btn-block"
@@ -39,14 +43,10 @@
 							class="btn btn-danger btn-block">Delete</button>
 					</form>
 				</div>
-				<p></p>
-				<div></div>
-				
-			</div>
 
+			</div>
 		</div>
-	</div>
-	<div th:replace="fragments/head :: bootstrapFooter"></div>
-	<script src="http://localhost:8080/scripts/main.js"></script>
+		<div th:replace="fragments/head :: bootstrapFooter"></div>
+		<script src="http://localhost:8080/scripts/main.js"></script>
 </body>
 </html>
