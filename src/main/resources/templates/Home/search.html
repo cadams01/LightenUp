@@ -1,28 +1,160 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head>
-<div th:replace="fragments/head :: bootstrapHeader"></div>
-<div th:replace="fragments/lights :: light"></div>
+    <div th:replace="fragments/head :: bootstrapHeader"></div>
+     <div th:replace="fragments/lights :: light"></div>
 </head>
 <body>
-	<div th:replace="fragments/head :: nav"></div>
 
-	<div class="container">
-		<div class="jumbotron" id="homejumbo" style="align-content: center">
-			<h1>Choose a Search Option</h1>
+<div th:replace="fragments/head :: nav"></div>
 
-			<form>
-				<input type="radio" name="searchOption" value="streetAddress" checked>Street Address<br>
-				<input type="radio" name="searchOption" value="city">City<br>
-				<input type="radio" name="searchOption" value="zipCode">Zip Code<br>
-				<input type="radio" name="searchOption" value="rating">Rating
-			</form>
+<div class="container">
+		<div class="jumbotron center" id="indexjumbo">
+		<h2>Search All Destinations</h2>
+        <div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>123 Main St</span>, <span>New York City</span>
+			    		<span>24582</span>
+			    		<span style="float:right">Rating: <span class="card-title">8</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
+        
+        <div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>72 Shire Ln</span>, <span>Mordor</span>
+			    		<span>19341</span>
+			    		<span style="float:right">Rating: <span class="card-title">7</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
+        
+        <div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>1803 Blue Note Ave</span>, <span>Coltrane Town</span>
+			    		<span>60606</span>
+			    		<span style="float:right">Rating: <span class="card-title">5</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
+        
+        <div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>42 Wallaby Way</span>, <span>Sydney</span>
+			    		<span>87072</span>
+			    		<span style="float:right">Rating: <span class="card-title">10</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
+        
+        <div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>17 Skywalker Ln</span>, <span>Empire</span>
+			    		<span>19341</span>
+			    		<span style="float:right">Rating: <span class="card-title">7</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
+        
+        <div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>123 Crump Rd</span>, <span> Exton</span>
+			    		<span>19341</span>
+			    		<span style="float:right">Rating: <span class="card-title">100</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
+        
+        <div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>123 Crump Rd</span>, <span> Exton</span>
+			    		<span>19341</span>
+			    		<span style="float:right">Rating: <span class="card-title">100</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
+        
+        <div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>123 Crump Rd</span>, <span> Exton</span>
+			    		<span>19341</span>
+			    		<span style="float:right">Rating: <span class="card-title">100</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
+        
+        <div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>123 Crump Rd</span>, <span> Exton</span>
+			    		<span>19341</span>
+			    		<span style="float:right">Rating: <span class="card-title">100</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
+        
+        <div class="home-card">
+            <div class="card border-danger solid">
+			    	<div class="card-header bg-white text-purple">
+			    		<h3><span>123 Crump Rd</span>, <span> Exton</span>
+			    		<span>19341</span>
+			    		<span style="float:right">Rating: <span class="card-title">100</span></span></h3>
+			    	</div>
+			    	</div>
+			    </div>   
+            <a class="btn btn-success btn-block" th:href="@{/home/show/{id}(id=${home.getId()})}">View</a>
+            <p></p>
+            <div>
+        </div>
 
-		</div>
-	</div>
+</div>
+</div>
 
 	<div th:replace="fragments/head :: bootstrapFooter"></div>
+	<script src="http://localhost:8080/scripts/sort.js"></script>
 </body>
-
 </html>
