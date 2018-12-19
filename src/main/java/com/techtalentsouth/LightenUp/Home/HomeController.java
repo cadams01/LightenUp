@@ -85,12 +85,6 @@ public class HomeController {
 	@GetMapping("/home/search")
 	public ModelAndView searchHome(Home home) {
 		ModelAndView mv = new ModelAndView("home/search");
-		return mv;
-	}
-	
-	@GetMapping("/home/searchCity")
-	public ModelAndView searchCity(Home home) {
-		ModelAndView mv = new ModelAndView("home/searchCity");
 		mv.addObject("homes", homeRepository.findAll());
 		return mv;
 	}
@@ -98,12 +92,14 @@ public class HomeController {
 	@GetMapping("/home/search-dsc")
 	public ModelAndView searchHomeDsc(Home home) {
 		ModelAndView mv = new ModelAndView("home/search-dsc");
+		mv.addObject("homes", homeRepository.findAll());
 		return mv;
 	}
 	
 	@GetMapping("/home/search-asc")
 	public ModelAndView searchHomeAsc(Home home) {
 		ModelAndView mv = new ModelAndView("home/search-asc");
+		mv.addObject("homes", homeRepository.findAll());
 		return mv;
 	}
 /*	
