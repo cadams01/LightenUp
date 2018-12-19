@@ -87,6 +87,18 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("home/search");
 		return mv;
 	}
+	
+	@GetMapping("/home/search-dsc")
+	public ModelAndView searchHomeDsc(Home home) {
+		ModelAndView mv = new ModelAndView("home/search-dsc");
+		return mv;
+	}
+	
+	@GetMapping("/home/search-asc")
+	public ModelAndView searchHomeAsc(Home home) {
+		ModelAndView mv = new ModelAndView("home/search-asc");
+		return mv;
+	}
 /*	
 	@RequestMapping(value="/home/search", method = RequestMethod.GET)
     @ResponseBody
