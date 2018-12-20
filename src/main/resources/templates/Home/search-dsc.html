@@ -3,6 +3,14 @@
 <head>
     <div th:replace="fragments/head :: bootstrapHeader"></div>
      <div th:replace="fragments/lights :: light"></div>
+     
+     <style>
+     .linkfont {
+	color: white;
+	font-weight: bold;
+}
+     </style>
+     
 </head>
 <body>
 
@@ -14,9 +22,9 @@
 		<div class="sortsearch">
 		<input type="text" placeholder="search by city" class="cityinput"></input>
 			<button class="searchbtn">Search</button>
-			<a href="http://localhost:8080/home/search/">Order Added</a>
-			<a href="http://localhost:8080/home/search-dsc/">Rating Descending</a>
-			<a href="http://localhost:8080/home/search-asc/">Rating Ascending</a>
+			<a class="linkfont" href="http://localhost:8080/home/search/">Order Added</a>
+			<a class="linkfont" href="http://localhost:8080/home/search-dsc/">Rating Descending</a>
+			<a class="linkfont" href="http://localhost:8080/home/search-asc/">Rating Ascending</a>
 		</div>
 		
 		<div class="home-card">
