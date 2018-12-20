@@ -1,4 +1,4 @@
-const editbtn = document.querySelector('#editbtn');
+const editbtn = document.querySelector('#btnwrapper');
 const deletebtn = document.querySelector('#deletebtn');
 
 editbtn.addEventListener('mouseover', function(){

@@ -65,6 +65,11 @@ main {
 	color: white;
 }
 
+#btnwrapper {
+	z-index: -2;
+	width: 100%;
+}
+
 #indexjumbo {
 	background: #1f253c;
 	color: white;
@@ -173,6 +178,8 @@ main {
 	border-radius: 50px;
 	max-width: 300px;
 	max-height: 300px;
+	min-width: 300px;
+	min-height: 300px;
 	padding: 2em;
 }
 

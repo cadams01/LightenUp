@@ -34,6 +34,7 @@
 					</div>
 
 				</div>
+				<div id="btnwrapper">
 				<div id="showbtn">
 					<a id="editbtn" class="btn btn-success btn-block"
 						th:href="@{/home/edit/{id}(id=${home.getId()})}">Edit</a>
@@ -43,7 +44,7 @@
 							class="btn btn-danger btn-block">Delete</button>
 					</form>
 				</div>
-
+			</div>
 			</div>
 		</div>
 		<div th:replace="fragments/head :: bootstrapFooter"></div>
